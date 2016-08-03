@@ -1,0 +1,56 @@
+.voucher-page-screen {
+	background-image: url('/assets/img/backgrounds/mobile-body-bg.jpg?1468099984');
+}
+
+.enter-code-view {
+	min-height: 46px;
+	background-image: url('/assets/img/backgrounds/mobile-body-bg.jpg?1468099984');
+	> .wrapped {
+		padding-top: 80px;
+		padding-bottom: 50px;
+	}
+
+	.intro-text {
+		margin-top: 0;
+	}
+	.text1,.tile4 {  
+		position: relative;
+		}
+		.tile4 {
+			z-index: 0;
+		    top: -82px;
+		    left: 169px;
+		    width: 107px;
+		}
+		 .text1 {    
+			z-index: 1;
+		    margin-top: 21px;
+		    margin-bottom: -119px;
+		}
+
+	input {
+		width: 63px;
+		height: 63px;
+		display: inline-block;
+		color: $blue;
+		text-align: center;
+		padding: 5px;
+		font-size: 50px;
+		margin-right: 4px;
+		border: 0;
+		border-radius: 0;
+		box-shadow: 3px 3px 0px 0px rgba(166, 166, 166, 0.75) inset;
+		background-color: $colourTextNeg;		
+		@include VeneerTwo();
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	#enter-code-form {
+
+		.btn {
+			margin-top: 40px;
+		}
+	}
+}

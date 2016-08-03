@@ -1,0 +1,78 @@
+.user-details-view {
+background-image: url('/assets/img/backgrounds/bg2.jpg');
+	.wrapped {
+		position: relative;
+		padding: 1px 0;
+		z-index: 10;
+	}
+
+	.header-wrap {
+		height: 180px;
+	}
+	
+	#details-subtitle {
+		margin: auto auto 20px auto;
+	}
+	
+
+	.text1,.tile2,.tile5 {  
+		position: absolute;
+	}
+	.tile2 {
+		z-index: -1;
+	    top: 107px;
+	    left: 169px;
+	    width: 107px;
+	}
+	.tile5 {
+		z-index: -1;
+	    top: 170px;
+	    left: -47px;
+	    width: 107px;
+	    height: 122px;
+	}
+	 .text1 {
+		z-index: 1;
+		margin-top: -116px;
+	}
+	
+
+	label {
+		display:block;
+				
+		color: $blue-dark;
+		margin: 15px 0 5px;
+	    font-weight: bold;
+    	font-size: 14px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	input[type="text"],
+	input[type="email"] {
+		width: 100%;
+		font-size: 24px;
+		color: $blue-dark;
+		@include VeneerTwo();
+		background-color: $colourTextNeg;
+		border: 0;
+		border-radius: 0;
+	}
+	::-webkit-input-placeholder {
+	   color: rgba(10,95,85, 0.5);
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: rgba(10,95,85, 0.5);  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: rgba(10,95,85, 0.5);  
+	}
+
+	:-ms-input-placeholder {  
+	   color: rgba(10,95,85, 0.5);  
+	}
+
+}

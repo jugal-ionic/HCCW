@@ -1,0 +1,191 @@
+/*********************
+
+Authors:
+	Luis Rodrigues
+
+Stylesheet:
+	Base stylesheet
+
+
+For quicker page loading it is recommended that this style sheet is embedded in the base HTML file
+
+*********************/
+
+html {
+	position: relative;
+	height: 100%;
+}
+
+html,
+body {
+	width: 100%;
+	min-width: 320px !important;
+	overflow: auto;
+}
+
+body {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	min-height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#error-overlay {
+	position: fixed;
+	background-color: rgba(255,255,255, 0.9);
+	min-height: 100% !important;
+	width: 100%;
+	z-index: 1200;
+	display: none;
+
+	#close-btn {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	  	width: 20px;
+	  	height: 20px;
+	  	display: block;
+	  	cursor: pointer;
+
+	  	svg {
+	  		fill: $blue-dark;
+	  	}
+	}
+
+	.small-wrapper {
+		width: 240px;
+		margin: 15% auto 0;
+	}
+
+	#dateErrorMessage {
+		text-align: center;
+		color: $blue-dark;
+		font-size: 22px;
+	}
+}
+
+.app {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	min-width: 320px !important;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.screen {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	min-width: 320px !important;
+	height: 1px;
+  	min-height: 100%;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	z-index: 1;
+
+	> .scrollable {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		min-width: 320px !important;
+		height: 100%;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.view {
+	width: 100%;
+	min-width: 320px;
+	min-height: 100%;
+
+	&.start-view {
+		background-color: #ffcc00;
+		background-image: none !important;
+		color: $blue-dark;
+
+		h2 {
+			position: absolute;
+			margin: 0;
+			bottom: 50%;
+			left: 20px;
+		}
+	}
+}
+
+.loading-wrapper {
+	height: 5px;
+	position: absolute;
+	bottom: 50%;
+	margin-bottom: -25px;
+	width: 100%;
+	padding: 0 20px;
+
+	.inner {
+		position: relative;
+		display: block;
+		height: 5px;
+
+		> div {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 5px;
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAf4AAAAJCAMAAADkUb4CAAAAkFBMVEUAAADmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSLmYSL1r3MdAAAAL3RSTlMAOBENl/LOB5zf1fjlo2gXA2D8tXRtW1MjxavayTLBiC1CfCob7em7V0sn0bCThEpDnRgAAAIkSURBVFjD7VXHsuJADHTOxhEciSbDo///73ZrJE1t1V598kOnRk23pm0NGN/61rd+a1nBmBHK+qEh1L7TjGmnspitoodoPt2Z0fbyo53aqpf2W1TtLTIJTTfHZjZIGbU7j1kz2k3MbryakRmupTeIZNVthPUEFWEg1k9PJMZSc81rXwNRrj6mKPFUqAMGX6EDEHFylOWZzwKEbBsAeznVDkgyGgt01LsBF3pinu4dAU8rLsrIHoGQJm4BODISKz5FiUChBgCHS4U14UJelgPUPGWhuWa2rzDizq57qItgufGL06/jAUeFkirFxGtTjmI2jKH7dz6pXI+P+4MXTFIlDg7Mvli0x0CsH/cVMlpJF/jQREQJ00lUvvjBpp3HWu8aK0keDbjRZuOE1KB6hW5C6LTQXDPbj3Bw4geGuFVLdYUs28d1eFl6IMwNHhXI3UjGETafKgTYKXBTbGhr5ZbYFwAF9ZIUjdyhTm839npRy4OSoPJKn54x4MgZEZKh24dXXmO10Kqu3QiLEi8018z2Rcwyw99hxz9jCd6EnjFAbAEceXyWaLwC9J/kdkDFeuCa0Vcj9NS7XxAQMuV1GDXiLYuLqmZUxxLagUg2wEOBPGD0L0szOKfgaaG55rZv10928DctozzLJXstk+6Tnn8uNJ6IprK0anWWViHIPwtr1jwxv7fG/2VbgppGSxo9Q1i/KGxCh7uh69GoxV9wrjntv/W76w/L3IMAnS2/mwAAAABJRU5ErkJggg==');
+			background-position: left top;
+			background-repeat: repeat-x;
+			background-size: 255px 5px;
+		}
+	}
+}
+
+	.cookie-wrap {
+		position: absolute;
+		z-index: 20;
+		width: 100%;
+		height: 75px;
+		background-color: $blue-dark;
+		display: none;
+		bottom: 0;
+		a {
+		    color: #f3f3f3;
+		    text-decoration: underline;
+		}
+	
+	p {
+		text-align: justify;
+		color: $colourTextNeg;
+		font-size: 11px;
+		width: 70%;
+		float: left;
+	}
+
+	button {
+		background-color: $blue;
+		border: 1px solid $colourTextNeg;
+		color: $colourTextNeg;
+		width: 20%;
+		float: right;
+		margin-top: 13px;
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: $colourTextNeg;
+			margin-top: 4px;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+/*********************
+
+Authors:
+	Luis Rodrigues
+
+Stylesheet:
+	Main stylesheet
+
+*********************/
+
+/*Compass*/
+@import "compass";
+
+/*Variables*/
+@import "variables";
+
+/*Utilities and other required styles*/
+@import "mixins";
+
+/*Base styles*/
+@import "fonts";
+@import "gui";
+
+/*Pages global styles*/
+@import "templates/global";
+
+/*Page specific styles*/
+@import "templates/ageGatePage";
+@import "templates/userDetailsPage";
+@import "templates/homePage";
+@import "templates/mapPage";
+@import "templates/enterCodePage";
+@import "templates/thankYouPage";
+@import "templates/privacyPolicy";
+@import "templates/commingSoonPage";

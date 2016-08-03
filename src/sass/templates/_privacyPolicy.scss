@@ -1,0 +1,70 @@
+.screen.privacy-policy-screen > .scrollable {
+	position: absolute;
+}
+
+.privacy-policy-view {
+
+	background-image: url('/assets/img/backgrounds/bg3.jpg?1468099984');
+	background-repeat: repeat;
+	padding-top: 40px;
+
+	.btn.back {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+	}
+
+	h1 {
+		margin: 0;
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		top: 0;
+		color: white;
+		font-style: italic;
+		line-height: 50px;
+		letter-spacing: 0.4mm;
+	}
+}
+
+.privacy-policy-view > .wrapped {
+
+	position: relative;
+	background-image: image-url('backgrounds/bg-privacy-policy-body.png');
+	background-repeat: repeat-y;
+	background-size: 100% auto;
+	margin-top: 40px;
+	
+	&:before {
+		position: absolute;
+		content: '';
+		display: block;
+		height: 46px;
+		width: 100%;
+		max-width: 280px;
+		background-image: image-url('backgrounds/bg-privacy-policy-header.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		top: -23px;
+	}
+
+	.privacy-policy-terms {
+		padding: 0 20px 20px;
+	}
+
+}
+
+h3.privacy-policy {
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+	clear: both;
+	color: $blue;
+}
+
+p.privacy-policy {
+	width: 100%;
+	clear: both;
+	font-size: 13px;
+	line-height: 20px;
+}

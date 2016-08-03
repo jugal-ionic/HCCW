@@ -1,0 +1,139 @@
+/*
+|-- Generic styles
+*/
+
+html,
+body {
+	font-family:$fontHavana;
+	background-color: #ffcc00;
+	min-width: 320px !important;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #084c80;
+	text-decoration: underline;
+}
+
+img {
+	width: 100%;
+}
+
+/*
+|-- Helper classes
+*/
+
+.wrapped {
+	max-width: 280px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.input-wrap {
+	-webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+	padding: 10px 10px;
+	box-shadow: 3px 3px 0px 0px rgba(166, 166, 166, 0.75) inset;
+	background-color: $colourTextNeg;
+	margin-bottom: 5px;
+}
+
+.clearfix {
+	height: 1px;
+	width: 100%;
+	display:block;
+	clear: both;
+}
+
+/*
+|-- Global styles for views
+*/
+
+/*--- The header is the same for these three view ---*/
+.map-view,
+.bars-list-view,
+.enter-code-view {
+	height: 100%;
+	background-color: white;
+	header {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		
+		height: 50px;
+		width: 100%;
+		z-index: 5;
+
+		.back {
+			position: absolute;
+			top: 12px;
+			left: 10px;
+		}
+
+		img {
+			width: 280px;
+    		margin: -11px auto;
+    		padding-top: 13px;
+			display: block;
+		}
+	}
+	.btn.close {
+		position: absolute;
+		right: 2px;
+		top: 6px;
+	}
+}
+.view {
+	background-repeat: repeat;
+	background-position: 0px -18px;
+	z-index: 0;
+}
+
+.header-wrap {
+	position: relative;
+	background-image: image-url('backgrounds/mobile-footer-wrap-bg.png');
+	background-repeat: repeat;
+	background-position: 0px 6px;
+	padding-top: 25px;
+	height: 300px;
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -9px;
+		left: 0;
+		height: 15px;
+		width: 100%;
+		background-image: image-url('backgrounds/background-transition-white-to-green.png');
+		background-position: center;
+		z-index: 1;
+		@include transform(rotateX(180deg));
+	}
+}
+.home-header {
+	position: relative;
+	padding-top: 13px;
+    width: 280px;
+    margin: 0 auto;
+}
+.intro-text {
+			text-align: center;
+			.blue {
+				color: $blue-dark;
+			}
+			.red {
+				color: $orange-dark;
+			}
+		}
+.small{
+	font-size: 14px;
+}
+.middle{
+	font-size: 16px;
+}
+.tc_pp{
+	margin-top: 10px;
+}

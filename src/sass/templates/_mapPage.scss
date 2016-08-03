@@ -1,0 +1,255 @@
+.filters-wrap {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 110px;
+	padding-top: 50px;
+	min-width: 320px;
+	width: 100%;
+	z-index: 4;
+	background-image: image-url('backgrounds/mobile-header-bg.png', false, false);
+	.filters {
+		padding-top: 8px;
+
+		a {
+			margin: 0;
+			color: $blue-dark;
+			border-radius: 5px;
+			border: 1px solid $blue-dark;
+			min-width: 49.4%;
+			display: inline-block;
+			text-align: center;
+			text-decoration: none;
+			@include VeneerTwo();
+			font-size: 24px;
+			float: left;
+			padding: 8px 0;
+
+			&:first-child {
+				border-top-right-radius: 0px;
+				border-bottom-right-radius: 0px;
+				background-color: white;
+			}
+			&:last-child {
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+				border-left: 0;
+				background-color: #f3f3f3;
+			}
+
+			&:hover {
+				background-color: $blue-dark;
+				color: $colourTextNeg;
+			}
+
+			&.map-filter-active {
+				background-color: $blue-dark;
+				color: white;
+			}
+		}
+	}
+}
+
+.map-wrap {
+	position: relative;
+	width: 100%;
+	z-index: 1;
+   	height: 100%;
+	.search-icon {
+		position: absolute;
+		width: 28px;
+		height: 29px;
+		left: 10px;
+		top: 140px;
+		z-index: 980;
+		-webkit-appearance: none;
+		background-color: transparent;
+		border: none;
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAdCAMAAACOj/wDAAAATlBMVEUAAAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzO4SX6oAAAAGnRSTlMAgHoFXzoKbxxFJRgTdGlnVTQOYjwqVlFNL0JnZl4AAADNSURBVCjPxZDbEoMgDEQNVi4iAt6q//+j3c4UAtjpa/fFJIckG7usfum77xoPR0Qu7HekZ0pSY8OiIEgofKCtYtebGItoMqKhFoV5+STyAaoZIvU9e17xlBvxdOpYCwZlU4boyagpYEztXuOeFLt6KrbCe4qxQnaVYCIZVG2nRGdxyVXBsbhlI1orGIhMvgsr9tos2Zyd2MGZhIejMOBAU+/omh+mBQp+0JOOcAc9+oJaRSzRUmlEQqccEmUcg1c+RImY6U3/pQzvFOynXuSpBcgVHTnEAAAAAElFTkSuQmCC');
+		background-repeat: no-repeat;
+		outline: none;
+		background-size: contain;
+
+		&#barsByPostcode {
+			z-index: 999;
+		}	
+	}
+
+	#map-search,
+	#list-search {
+		position: relative;
+		width: 100%;
+		height: 50px;
+		box-sizing: border-box;
+		z-index: 970;
+		margin: 20px auto 0;
+		padding: 6px 20px 6px 50px;
+		border: none;
+		box-shadow: 0px 2px 0 0 rgba(0,0,0, 0.1);
+		@include VeneerTwo();
+		font-size: 18px;
+		color: #1b467b;
+	    font-family: 'VeneerTwo' !important;
+	    background-color: #ffffff;
+	}
+
+	#list-search {
+		z-index: 998;
+	}
+
+	::-webkit-input-placeholder {
+	  	color: rgba(10,95,85, 0.5); 
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	  	color: rgba(10,95,85, 0.5); 
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	  	color: rgba(10,95,85, 0.5); 
+	}
+
+	:-ms-input-placeholder {  
+		color: rgba(10,95,85, 0.5); 
+	}
+	
+	#map-canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+#bar-details-overlay {
+	display: none;
+	position: absolute;
+	min-height: 260px;
+	width: 100%;
+	top: 50px;
+	left: 0px;
+	z-index: 3000;
+	background-color: #F9D72A;
+	box-shadow: 0 2px 2px rgba(0,0,0, 0.25);
+
+	.wrapped {
+		padding-top: 40px;
+	}
+}
+
+.bar-name,
+.bar-more-info {
+	width: 175px;
+	float: left;
+	display: inline-block;
+}
+
+.bar-name {
+	@include VeneerTwo();
+	color: $blue-dark;
+	font-size: 28px;
+	font-weight: 200;
+}
+
+.bar-more-info {
+	width: 90px;
+	margin-top: 30px;
+	float: right;
+}
+
+.distance {
+	font-size: 13px;
+	text-align: right;
+	width: 100%;
+	display: inline-block;
+}
+
+.getDirectionsArrow {
+	display: block;
+	float: right;
+	width: 16px;
+	height: 26px;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAABICAYAAACN4RdNAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJfSURBVHjaYvz//z8DNiDtUYNV4umOFkaGAQQAAcSI7mBcDh0sjgYIIBQHE+PYgXY0QADBHUyKYwfS0QABxESJZnI8SSkACCAmSg2gt6MBAgicJKhhKb2SB0AAMVHLIHqFNEAAUZTpBiKkAQKIidoG0jqkAQKIiRaG0tLRAAFEdsUxUMkDIIDIqpoH0tEAAcSIrfEzmB0NEEBMDHQA1AwAgABiJLV5OdAhDRBAOB08WB0NEEB4HTwYHQ0QQAQdPNgcDRBATPTO5ZQCgAAiKoQHU3EHEEAkOXgwOBoggEh28EA7GiCAyHLwQDoaIIDIdvBAORoggChy8EA4GiCAKHYwvR0NEEBUcTA9HQ0QQFRzML0cDRBAdGleUjMAAAKIqiFMj3YHQABR3cG0djRAANEkSdCysQQQQDRLw7RyNEAA0SRJ0Cp5gAIBIIBoXkpQO6QBAojmDqZ2BgQIIJomCWonBxANEEBMQyVkYQAggIbcYCBAAA3qqhlbxgUIoEFfNaOXMgABNORaawABNOTawwABNOR6HAABNOT6dAABNOR6zQABNOTGJQACaMiN/AAE0JAbWwMIoCE3egkQQEQ7eLDMLAEE0ICMwFPSqAcIICZ6O5ZSABBAQ24WCSCAhtw8HUAA0WXqlpqdUYAAovnkOLV7zgABNOS6+QABNOTWSwAEENXX/NDSsSAAEEBDbjAQIICYhpJjQQAggKi20I4ejgUBgABiGiohCwMAAUSVTEfP2X6AAGIaKiELAwABxDSUHAsCAAE05FZoAwTQkFsDDxBAjENtlwFAANF8UobaACDAADM/hdjU8WVFAAAAAElFTkSuQmCC');
+	background-repeat: no-repeat;
+	background-size: 16px 26px;
+	margin-top: -5px;
+	cursor: pointer;
+}
+
+address {
+	font-size: 16px;
+	
+	font-style: normal;
+	color: $colourText;
+	width: 100%;
+	clear: both;
+	margin-bottom: 20px;
+	white-space: pre-line;
+}
+
+.phoneNumber {
+	width: 100%;
+	clear: both;
+}
+
+.get-directions {
+	margin: 0 auto 20px;
+}
+
+.map-view .bar-name,
+.map-view .distance,
+.map-view address {
+	width: 70%;
+	float: left;
+	margin: 0;
+}
+
+.map-view address {
+	margin-bottom: 5px;
+	white-space: pre-line;
+}
+
+.bars-postcode {
+	width: 100%;
+	clear: both;
+}
+
+.map-view .distance {
+	width: 30%;
+	line-height: 40px;
+}
+
+.bars-list-view {
+	background-image: none;
+	background-color: #F9D72A;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	z-index: 2;
+	display: none;
+	height: auto;
+
+	.distance {
+		text-align: left;
+		width: auto;
+	}
+}
+
+.map-wrap {
+
+	> .wrapped {
+		padding-top: 110px;
+	}
+}
+
+.map-page-screen.standalone-version {
+
+	.hide-on-standalone {
+		display: none;
+	}
+
+}

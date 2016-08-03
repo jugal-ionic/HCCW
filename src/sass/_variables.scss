@@ -1,0 +1,33 @@
+/*********************
+
+Authors:
+	Luis Rodrigues
+
+Stylesheet:
+	Variables stylesheet
+
+*********************/
+
+/*Colours*/
+$colourText: #222222;
+$colourTextNeg: #ffffff;
+$colourTextNeutral: #b3b3b3;
+$gray: #696969;
+$orange: #FF4C05;
+$orange-dark: #DF2628;
+$green: #57aa9b;
+$green-dark: #0a5f55;
+$blue: #03324e;
+$blue-dark:#084c80;
+$twitter: #03324e;
+$twitter-dark: #084c80;
+
+$fontHavana:"Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/*Screen width breakpoints*/
+$breakpoints: (
+	(mobile	480px)
+    (tablet 640px)
+    (desktop 960px)
+    (extended 1440px)
+)
