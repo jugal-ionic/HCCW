@@ -7635,12 +7635,20 @@ function callbackPosition(position) {
     window.UsersLat = latitude;
     window.UsersLng = longitude;
     window.UsersLatLng = [ latitude, longitude ];
-    if (latitude !== null || longitude !== null) localStorage.setItem("usersLocation", JSON.stringify(UsersLatLng)); else localStorage.setItem("usersLocation", JSON.stringify([ 52.6344122, -1.1368473 ]));
+    if (latitude !== null || longitude !== null) {
+        ga("send", "event", "location", "share");
+        localStorage.setItem("usersLocation", JSON.stringify(UsersLatLng));
+    } else {
+        localStorage.setItem("usersLocation", JSON.stringify([ 52.6344122, -1.1368473 ]));
+    }
 }
 
 function errorPositionCallBack() {
     //alert("Please enable geolocation on your device");
     localStorage.setItem("usersLocation", JSON.stringify([ 52.6344122, -1.1368473 ]));
+    var errorMessage = document.getElementById("dateErrorMessage"), errorWrapper = document.getElementById("error-overlay");
+    errorMessage.innerHTML = "PLEASE REFRESH BROWSER AND ENABLE LOCATION SERVICE TO VIEW BARS";
+    errorWrapper.style.display = "block";
 }
 
 // Listen for orientation changes
