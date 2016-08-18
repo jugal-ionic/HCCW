@@ -1,0 +1,15 @@
+{
+  "global": {
+    "parseVersion": "1.6.14"
+  },
+  "applications": {
+    "hccw16": {
+      "applicationId": "3gF3K1Hv9nHFSkntYWGpCJGpEcENVNepL6hXe4YT",
+      "masterKey": "QawqQV0Fzkuv2sRTo3t9sexQ3agR2hHwbfu10Ege"
+    },
+    
+    "_default": {
+      "link": "hccw16"
+    }
+  }
+}
