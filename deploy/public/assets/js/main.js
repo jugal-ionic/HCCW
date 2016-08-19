@@ -6475,7 +6475,7 @@ function MapPageScreen() {
         nameField.textContent = barData.name1 + (barData.name2 ? " " + barData.name2 : "");
         addressField.textContent = barData.address1 + (barData.address2 ? "\n" + barData.address2 : "") + (barData.address3 ? "\n" + barData.address3 : "") + (barData.address4 ? "\n" + barData.address4 : "");
         barPostcode.textContent = barData.postcode;
-        distance.textContent = distanceToBar || nonShared ? distanceToBar : "";
+        distance.textContent = distanceToBar ? distanceToBar : "";
         if (barData.phone) {
             phoneNumField.innerHTML = barData.phone;
             phoneNumField.href = "tel:" + barData.phone.replace(/ /g, "");
@@ -6483,7 +6483,7 @@ function MapPageScreen() {
         } else {
             phoneNumField.parentNode.style.display = "none";
         }
-        if (distanceToBar === "") distance.style.display = "none"; else distance.style.display = "block";
+        if (nonShared) distance.style.display = "none"; else distance.style.display = "block";
         activeBar = barData;
     }
     function addBarMarker(barData) {
@@ -6513,7 +6513,7 @@ function MapPageScreen() {
             phone: barData.phone,
             phoneLabel: barData.phone ? "Tel." : "",
             phoneClean: barData.phone ? barData.phone.replace(/ /g, "") : false,
-            directionsEnabled: (!distanceToBar || self.screenData.standalone) && !nonShared ? false : true,
+            directionsEnabled: !distanceToBar || self.screenData.standalone || nonShared ? false : true,
             index: index
         };
         return Mustache.render(barListItemTemplate, barItemData);
@@ -6742,7 +6742,15 @@ function MapPageScreen() {
         document.getElementById("closeBtn").addEventListener("click", hideBarDetails);
         document.getElementById("searchBarMapForm").addEventListener("submit", searchFromMap);
         document.getElementById("searchBarListForm").addEventListener("submit", searchFromList);
-        if (!nonShared) {
+        initMap();
+        if (userCoordinates[0] === 52.6344122 && userCoordinates[1] === -1.1368473) {
+            nonShared = true;
+            searchNearAddress("leicester", 2);
+            console.log("default");
+        } else {
+            getNearestToMapCenter(true);
+        }
+        if (nonShared) {
             getDirectionsBtn.parentNode.removeChild(getDirectionsBtn);
         } else {
             document.getElementById("getDirections").addEventListener("click", getDirectionsToBar);
@@ -6752,14 +6760,6 @@ function MapPageScreen() {
             backBtn.parentNode.removeChild(backBtn);
         } else {
             backBtn.addEventListener("click", self.scrManager.goBack);
-        }
-        initMap();
-        if (userCoordinates[0] === 52.6344122 && userCoordinates[1] === -1.1368473) {
-            nonShared = true;
-            searchNearAddress("leicester", 2);
-            console.log("default");
-        } else {
-            getNearestToMapCenter(true);
         }
         return this.container;
     };

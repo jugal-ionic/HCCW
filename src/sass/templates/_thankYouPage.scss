@@ -1,0 +1,117 @@
+.thank-you-view {
+	background-image: url('/assets/img/backgrounds/bg3.jpg?1468099984');
+
+	header {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 60px;
+		
+		z-index: 10;
+
+		.headers-wrap {
+			text-align: center;					
+			height: 55px;
+
+			img {
+				display: block;
+				width: 280px;
+				margin: 0 auto;
+				padding-top: 5px;
+			}
+		}
+	}
+
+	.page-main {
+		position: relative;
+		padding-top: 0px;
+		
+	}
+
+	.intro-text {
+		font-size: 26px;
+		margin: 0;
+	}
+
+	.intro-text-name{
+		font-size: 35px;
+		font-family:'VeneerTwo';		
+		color: $blue-dark;
+		margin: 5px;
+	}
+
+	#thanks-title {
+		margin: 30px 0 10px;
+	}
+
+	.text1,.tile3 {  
+		position: relative;
+	}
+	.tile3 {
+		z-index: 0;
+	    top: 125px;
+	    left: 169px;
+	    width: 107px;
+	    height: 122px;
+	}
+	 .text1 {
+		z-index: 1;
+		margin-top: -116px;
+	}
+	
+	#HC_Name_thanks{
+			margin: 0 0 10px;
+	}
+	#HC_refershingCocktail{
+		z-index:11;
+			margin: 0 0 10px;
+	}
+	p {
+		text-align: center;
+	}
+
+	#sharing-block {
+		clear: both;
+		width: 280px;
+		margin: 0 auto;
+		padding-left: 34px;
+		text-align: center;
+		.btn {
+			display: inline-block;
+			margin: 0 12px;
+		}
+	}
+
+	footer {
+		position: relative;
+
+		.subscribe-btn {
+			margin: 20px auto 0;
+			background-color:#084c80;
+		}
+
+		p {
+			padding-top: 10px;
+			clear: both;
+			color: $blue-dark;
+			text-align: center;
+			font-size:30px;
+    		font-weight: bold;
+			margin-bottom: 5px;
+			&#ending-text {
+				
+				font-style: italic;
+					letter-spacing: 0.2mm;
+					font-size: 18px;
+					margin-bottom: 20px;
+			}
+		}
+		.promotion-text1{
+			font-family: 'VeneerTwo';
+		    font-size: x-large;
+		    font-weight: bold;	
+		    color: $blue-dark;
+		}
+	}
+}

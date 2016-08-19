@@ -1,0 +1,105 @@
+.comming-soon-view {
+background-image: url('/assets/img/backgrounds/bg1.jpg?1468099984');
+	header {
+		position: relative;
+		background-repeat: repeat-x;
+		padding-top: 5px;
+		height: 60px;
+
+		.headers-wrap {
+			text-align: center;
+
+			img {
+				max-width: 280px;
+			}
+		}
+	}
+
+	.page-content {
+		padding-bottom: 32px;
+
+		.text1,.tile1 {  
+		position: relative;
+		}
+		.tile1 {
+		    z-index: 0;
+		    top: 62px;
+		    left: 83px;
+		    width: 107px;
+		}
+		 .text1 {    
+			z-index: 1;
+		    margin-top: 21px;
+		    margin-bottom: -119px;
+		}
+		.intro-text1{
+			font-family: 'Helvetica Neue';
+		    font-size: x-large;
+		    font-weight: bold;	
+		    color: $blue-dark;
+		}
+		.intro-text2{
+			font-family: 'Helvetica Neue';
+		    font-size: x-large;
+		    font-weight: bold;	
+		    color: $orange-dark;
+		}
+		#whooop-title {
+			margin-top: 30px;
+		}
+		
+		#voucher-cta {
+			cursor: pointer;
+			margin-top: 10px;
+		}
+
+		#what-next {
+			margin-top: 20px;
+		}
+
+		.social-wrap {
+			position: relative;
+
+			.centered {
+				position: relative;
+				max-width: 180px;
+				margin: 0 auto 20px;
+			}
+			
+			.social-text {
+				position: relative;
+				color: $blue-dark;
+				font-size: 13px;
+				width: 100%;
+			}
+
+			.social-icons {
+				position: relative;
+				right: 0px;
+				top: 0px;
+				width: 100%;
+
+				.btn {
+					display: inline-block;
+					margin-right: 15px;
+				}
+			}
+		}
+
+		.steps-wrap {
+			position: relative;
+		}
+		#add-to-calendar {
+			margin: 32px auto 0 auto;
+		}
+	}
+
+	footer {
+		padding-top: 10px;
+		clear: both;
+		color: $blue-dark;
+		text-align: center;
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+}
